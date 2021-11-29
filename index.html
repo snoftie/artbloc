@@ -1,0 +1,92 @@
+<style>
+  :root {
+    --bg-color: #FFF3F2;
+    --accent-color: #A6A5E3;
+    --font-color1: #505181;
+    --font-color2: #FFFFFF;
+    --other-color: #EBF2FF;
+  }
+
+  p {
+    width: 600px;
+    margin: 0 auto;
+    font-family: monospace;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: var(--font-color2);
+  }
+
+  body {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+  }
+
+  .scroller {
+    position: relative;
+    width: 2000px;
+    height: 30px;
+    top: 13%;
+    background-color: var(--accent-color);
+
+  }
+
+  .scroller p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    bottom: 20%;
+    line-height: 50px;
+    text-align: center;
+    /* Starting position */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    /* Apply animation to this element */
+    -moz-animation: scroll-left 15s linear infinite;
+    -webkit-animation: scroll-left 15s linear infinite;
+    animation: scroll-left 15s linear infinite;
+  }
+
+  /* Move it (define the animation) */
+  @-moz-keyframes scroll-left {
+    0% {
+      -moz-transform: translateX(100%);
+    }
+
+    100% {
+      -moz-transform: translateX(-100%);
+    }
+  }
+
+  @-webkit-keyframes scroll-left {
+    0% {
+      -webkit-transform: translateX(100%);
+    }
+
+    100% {
+      -webkit-transform: translateX(-100%);
+    }
+  }
+
+  @keyframes scroll-left {
+    0% {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+
+    100% {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+
+
+  }
+</style>
+
+<div class="scroller">
+  <p>art block sucks :c </p>
+</div>
